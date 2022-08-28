@@ -1,0 +1,275 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #000000;
+    background: -webkit-linear-gradient(to bottom, #000000, #303030,#000000);
+    background: linear-gradient(to bottom, #000000, #303030,#000000);
+    color: #fdfdfd;
+
+}
+
+/*SECCION DEL HEADER*/
+
+header{
+    background-image: url(/assets/images/imagen-cine.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.title-page{
+    padding: 20px 15px;
+    margin: 0 23px;
+    font-size: 4.5em;
+}
+
+/*SECCION DEL NAV*/
+
+.nav{
+    background-color: #131313;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-bar-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-item{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.4em;
+    margin: 7px;
+    padding: 4px;
+    color: #fdfdfd;
+    transition: .5s color;
+}
+
+.nav-item:hover{
+    color: #df0f0f;
+}
+
+.container-search{
+    position: relative;
+    margin: 20px;
+}
+
+input{
+    outline: none;
+    font-size: 20px;
+    width: 0;
+    height: 40px;
+    padding: 0 20px;
+    color: #000;
+    border-radius: 50px;
+    border: 1px solid #D50000;
+    transition: all .7s ease;
+}
+
+::placeholder{
+    color: gray;
+}
+
+.btn{
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    width: 60px;
+    height: 60px;
+    background: #D50000;
+    line-height: 1.6;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.btn span{
+    font-size: 25px;
+    color:white;
+    line-height: 60px;
+    transition: all .7s ease;
+}
+
+.container-search:hover input{
+    width: 350px;
+}
+
+/*SECCION DEL MAIN CONTAINER*/
+
+.container-mejores-series{
+    text-align: center;
+}
+
+.mejores-series{
+    width: 100%;
+}
+
+.image-mejores-series{
+    width: 100%;
+}
+
+.texto-mejores-series P{
+    padding: 30px;
+    font-size: 2em;
+    font-weight: bold;
+    transition: all .7s ease;
+}
+
+.texto-mejores-series p:hover{
+    color:#D50000;
+    cursor: pointer;
+}
+
+.container-critica{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+}
+
+.title-cines{
+    text-align: center;
+}
+
+.title-redes-sociales,
+.title-cines,
+.title-critica{
+    margin-left: 20px;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+.critica{
+    max-width: 100%;
+    padding:10px;
+    cursor: pointer;
+}
+
+.image-critica{
+    width: 100%;
+}
+
+.text-critica{
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.container-cines{
+    text-align: center;
+    padding: 20px;
+}
+
+.cine{
+    margin: 10px;
+}
+
+/*SECCION FOOTER*/
+.container-contact{
+    margin: 60px 0;
+    text-align: center;
+}
+
+.title-redes-sociales{
+    margin: 5px 0;
+}
+
+.container-redes-social{
+    display: flex;
+    flex-direction: column;
+}
+
+.red-social{
+    position: relative;
+    top:0;
+    width: 50px;
+    margin: 15px 0;
+    transition: 1s top ease;
+}
+
+.red-social:hover{
+    top: -10px;
+}
+
+footer p{
+    text-align: center;
+    color: #444444;
+    padding: 10px;
+}
+
+/*SECCION MEDIA QUERIS*/
+@media(min-width: 768px) and (max-width: 1024px){
+    .nav{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .nav-bar-container{
+        flex-direction: row;
+    }
+
+    .container-search:hover input{
+        width: 290px;
+    }
+
+    .container-critica{
+        grid-template-rows: 300px ;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .cine iframe{
+        width: 600px;
+    }
+
+    .container-redes-social{
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}
+
+@media(min-width: 1009px) and (max-width: 1920px){
+    .nav{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .nav-bar-container{
+        flex-direction: row;
+    }
+
+    input{
+        width: 350px;
+    }
+
+    .main-container{
+        margin: 50px;
+    }
+
+    .container-critica{
+        grid-template-rows: 300px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .cine iframe{
+        width: 800px;
+    }
+
+    .container-redes-social{
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .social-link{
+        margin: 0 30px;
+    }
+}

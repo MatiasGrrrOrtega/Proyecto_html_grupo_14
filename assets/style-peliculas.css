@@ -1,0 +1,338 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #000000;
+    background: -webkit-linear-gradient(to bottom, #000000, #434343,#000000);
+    background: linear-gradient(to bottom, #000000, #434343,#000000);
+    color: #fdfdfd;
+
+}
+
+/*SECCION DEL HEADER*/
+
+header{
+    background-image: url(/assets/images/imagen-cine.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.title-page{
+    padding: 20px 15px;
+    margin: 0 23px;
+    font-size: 4.5em;
+}
+
+/*SECCION DEL NAV*/
+
+.nav{
+    background-color: #131313;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-bar-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-item{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.4em;
+    margin: 7px;
+    padding: 4px;
+    color: #fdfdfd;
+    transition: .5s color;
+}
+
+.nav-item:hover{
+    color: #df0f0f;
+}
+
+.container-search{
+    position: relative;
+    margin: 20px;
+}
+
+input{
+    outline: none;
+    font-size: 20px;
+    width: 0;
+    height: 40px;
+    padding: 0 20px;
+    color: #000;
+    border-radius: 50px;
+    border: 1px solid #D50000;
+    transition: all .7s ease;
+}
+
+::placeholder{
+    color: gray;
+}
+
+.btn{
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    width: 60px;
+    height: 60px;
+    background: #D50000;
+    line-height: 1.6;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.btn span{
+    font-size: 25px;
+    color:white;
+    line-height: 60px;
+    transition: all .7s ease;
+}
+
+.container-search:hover input{
+    width: 350px;
+}
+
+/*SECCION DEL MAIN CONTAINER*/
+
+.main-container{
+    margin: auto;
+}
+
+.title-peliculas{
+    text-align: center;
+    text-decoration: underline;
+    font-size: 1.4em;
+    margin: 7px 0;
+}
+
+.container-peliculas{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pelicula{
+    width: 400px;
+    margin: 10px;
+    padding: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.description{
+    background-color: #131313;
+    border-radius: 25px;
+    position: relative;
+    overflow: hidden;
+    height: 25px;
+    margin: 10px;
+}
+
+.description:hover{
+    height: 100%;
+}
+
+.titulo-pelicula{
+    text-align: center;
+    font-size: 1.3em;
+    transition: .7s color ease;
+    cursor: pointer;
+}
+
+.titulo-pelicula:hover{
+    color: #a80000;
+    text-decoration: underline;
+}
+
+.duracion{
+    margin-top: 5px;
+    text-align: center;
+}
+
+.reparto p,
+.synopsis p{
+    padding: 10px;
+}
+
+.titulo-synopsis{
+    font-size: 1.3em;
+    text-decoration: underline;
+}
+
+.titulo-reparto,
+.titulo-genero{
+    font-size: 1.1em;
+    color: #7c7c7c;
+}
+
+.ranking{
+    text-align: center;
+}
+
+.ranking p{
+    margin: 7px 0;
+}
+
+.material-symbols-outlined{
+    color: #efff0a;
+}
+
+/*FIN SECCION DEL MAIN CONTAINER*/
+
+/*SECCION FOOTER*/
+.container-contact{
+    margin: 60px 0;
+    text-align: center;
+}
+
+.title-redes-sociales{
+    margin: 5px 0;
+    text-decoration: underline;
+}
+
+.container-redes-social{
+    display: flex;
+    flex-direction: column;
+}
+
+.red-social{
+    position: relative;
+    top:0;
+    width: 50px;
+    margin: 15px 0;
+    transition: 1s top ease;
+}
+
+.red-social:hover{
+    top: -10px;
+}
+
+footer p{
+    text-align: center;
+    color: #444444;
+    padding: 10px;
+}
+
+/*SECCION DE LOS MEDIAQUERIS*/
+@media(min-width: 768px) and (max-width: 1024px){
+    .nav{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .nav-bar-container{
+        flex-direction: row;
+    }
+
+    .titulo-pelicula{
+        font-size: 1.6em;
+        text-align: start;
+        text-decoration: underline;
+        margin: 10px;
+    }
+
+    .container-peliculas{
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .pelicula{
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .description{
+        height: 100%;
+        margin: 10px;
+    }
+
+    .duracion{
+        text-align: start;
+        margin-left: 10px;
+    }
+
+    .container-search:hover input{
+        width: 290px;
+    }
+
+    .container-redes-social{
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}
+
+@media(min-width: 1009px) and (max-width: 1920px){
+    .nav{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .nav-bar-container{
+        flex-direction: row;
+    }
+
+    input{
+        width: 350px;
+    }
+
+    .main-container{
+        margin: 50px;
+    }
+
+    .container-peliculas{
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .pelicula{
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .titulo-pelicula{
+        font-size: 1.6em;
+        text-align: start;
+        text-decoration: underline;
+        margin: 10px;
+    }
+
+    .description{
+        height: 100%;
+        margin: 10px;
+    }
+
+    .duracion{
+        text-align: start;
+        margin-left: 10px;
+    }
+
+    .container-redes-social{
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .social-link{
+        margin: 0 30px;
+    }
+}
