@@ -298,7 +298,6 @@ footer p{
     }
     
     .nav{
-        flex-direction: row;
         justify-content: space-around;
     }
 
