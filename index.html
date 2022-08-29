@@ -11,15 +11,20 @@
 </head>
 <body>
     <header>
-        <div class="marilyn-monroe"></div>
-        <h1 class="title-page">CineJujuy</h1>
+        <div class="container-title-page">
+            <h1 class="title-page">CineJujuy</h1> 
+        </div>
+        <div class="container-logo">
+            <img class="image-logo" src="assets/images/logo-cine.png" alt="logo-cine">
+        </div>
     </header>
     <nav class="nav">
         <nav class="nav-bar-container">
             <a class="nav-item" href="#">Inicio</a>
-            <a class="nav-item" href="#">Generos</a>
+            <a class="nav-item" href="#horario">Horarios</a>
             <a class="nav-item" href="peliculas.html">Peliculas</a>
-            <a class="nav-item" href="#">Series</a>
+            <a class="nav-item" href="#">Precios</a>
+            <a class="nav-item" href="#">Estrenos</a>
         </nav>
         <div class="container-search">
             <input type="text" placeholder="Busca Pelicula...">
@@ -34,7 +39,7 @@
                 <img class="image-mejores-series" src="assets/images/mejores-series.jpg" alt="image-mejores-series">
             </div>
             <div class="texto-mejores-series">
-                <p>LAS 100 MEJORES SERIES DE LA HISTORIA</p>
+                <p>LAS 100 MEJORES PELICULAS DE LA HISTORIA</p>
             </div>
         </div>
         <div class="title-critica">
@@ -55,8 +60,33 @@
             </div>
             <div class="critica">
                 <img class="image-critica" src="assets/images/image-critica-4.jpg" alt="image-critica">
-                <div class="text-critica"><p>Critica de 'Black Phone'</h3></div>
+                <div class="text-critica"><p>Critica de 'Tren Bala'</p></div>
             </div>
+        </div>
+        <div class="container-horarios">
+            <div class="title-horario" id="horario">
+                <h2>Horario</h2>
+            </div>
+            <table class="tabla-horario">
+                <thead>
+                    <th>Lunes</th>
+                    <th>Martes</th>
+                    <th>Miercoles</th>
+                    <th>Jueves</th>
+                    <th>Viernes</th>
+                    <th>Sabado</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>15:30pm a 22:00pm</td>
+                        <td>15:30pm a 22:00pm</td>
+                        <td>15:30pm a 22:00pm</td>
+                        <td>15:30pm a 22:00pm</td>
+                        <td>15:30pm a 22:00pm</td>
+                        <td>-</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
         <div class="title-cines">
             <h2>Cines de Jujuy</h2>

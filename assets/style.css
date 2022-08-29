@@ -20,12 +20,19 @@ header{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-logo{
+    width: 110px;
+    height: 110px;
 }
 
 .title-page{
     padding: 20px 15px;
-    margin: 0 23px;
-    font-size: 4.5em;
+    font-size: 3.5em;
 }
 
 /*SECCION DEL NAV*/
@@ -142,6 +149,7 @@ input{
     text-align: center;
 }
 
+.title-horario,
 .title-redes-sociales,
 .title-cines,
 .title-critica{
@@ -157,7 +165,8 @@ input{
 }
 
 .image-critica{
-    width: 100%;
+    max-width: 100%;
+    text-align: center;
 }
 
 .text-critica{
@@ -172,6 +181,25 @@ input{
 
 .cine{
     margin: 10px;
+}
+
+.tabla-horario{
+    width: 100%;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.tabla-horario, th, td{
+    border: 1px solid #fff;
+    border-collapse: collapse;
+}
+
+th, td{
+    padding: 10px 5px;
+}
+
+th{
+    background-color: #200606;
 }
 
 /*SECCION FOOTER*/
@@ -209,6 +237,10 @@ footer p{
 
 /*SECCION MEDIA QUERIS*/
 @media(min-width: 768px) and (max-width: 1024px){
+    header{
+        justify-content: start;
+    }
+
     .nav{
         flex-direction: row;
         justify-content: space-around;
@@ -238,6 +270,10 @@ footer p{
 }
 
 @media(min-width: 1009px) and (max-width: 1920px){
+    header{
+        justify-content: start;
+    }
+
     .nav{
         flex-direction: row;
         justify-content: space-around;
